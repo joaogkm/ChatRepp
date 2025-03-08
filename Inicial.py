@@ -2,6 +2,7 @@ import streamlit as st
 import webbrowser
 import time
 
+
 st.set_page_config(
     page_title='Inicio',
     page_icon='🏡',

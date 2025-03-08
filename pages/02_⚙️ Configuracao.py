@@ -2,8 +2,8 @@ import streamlit as st
 import os
 from loaders import *
 import pandas as pd
-from langchain.document_loaders import PyPDFLoader
-
+import openai
+import langchain
 
 TIPOS_ARQUIVOS_VALIDOS = ['Site', 'Youtube', 'PDF', 'CSV', 'TXT']
 
