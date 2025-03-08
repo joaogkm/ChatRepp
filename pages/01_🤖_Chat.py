@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import openai
 import requests
-from utils_openai import retorna_resposta_modelo
+# from utils_openai import retorna_resposta_modelo
 from utils_files import *
 from dotenv import load_dotenv
 from fake_useragent import UserAgent
@@ -171,6 +171,18 @@ def pagina_principal():
         salvar_mensagens(mensagens)
 
 # Resume o texto para diminuir o numero de tokens
+
+
+def retorna_resposta_modelo(mensagens, modelo='gpt-3.5-turbo', temperatura=0, stream=False):
+    client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
+    response = client.chat.completions.create(
+        model=modelo,
+        messages=mensagens,
+        temperature=temperatura,
+        stream=stream
+    )
+    return response
 
 
 def resumir_texto(texto):
