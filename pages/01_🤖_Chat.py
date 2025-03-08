@@ -3,7 +3,7 @@ import os
 import openai
 import requests
 # from utils_openai import retorna_resposta_modelo
-from utils_files import *
+from pages.utils_files import *
 from dotenv import load_dotenv
 from fake_useragent import UserAgent
 from langchain_community.document_loaders import (
