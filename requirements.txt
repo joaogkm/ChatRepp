@@ -1,5 +1,1 @@
-streamlit
-os
 openai==1.48.0
-requests
-langchain
