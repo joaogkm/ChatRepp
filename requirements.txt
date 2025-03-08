@@ -1,23 +1,5 @@
-import streamlit as st
-import os
-import openai
-import requests
-from utils_openai import retorna_resposta_modelo
-from utils_files import *
-from dotenv import load_dotenv
-from fake_useragent import UserAgent
-from langchain_community.document_loaders import (YoutubeLoader, CSVLoader, PyPDFLoader, TextLoader)
-from fake_useragent import UserAgent
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from time import sleep
-from bs4 import BeautifulSoup
-import xml.etree.ElementTree as ET
-import streamlit as st
-import os
-from loaders import *
-import pandas as pd
-import openai
-import langchain
-import streamlit as st
-import webbrowser
-import time
+streamlit
+os
+openai
+requests
+langchain
