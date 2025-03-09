@@ -103,8 +103,8 @@ def pagina_principal():
     conteudo_arquivos = st.session_state['conteudo_arquivos']
 
     # Verifica se o conteúdo foi carregado corretamente (para debug)
-    # st.write("🔍 Debug: Conteúdo carregado dos arquivos:",
-    #          conteudo_arquivos[:500])  # Exibe os primeiros 500 caracteres
+    st.write("🔍 Debug: Conteúdo carregado dos arquivos:",
+             conteudo_arquivos[:500])  # Exibe os primeiros 500 caracteres
 
     # Carrega mensagens e remove mensagens inválidas (com content = None)
     mensagens = [msg for msg in ler_mensagens(
@@ -151,7 +151,7 @@ def pagina_principal():
         resposta_completa = ''
         try:
             # Verifica exatamente o que está sendo enviado ao modelo
-            # st.write("🔍 Debug: Mensagens enviadas ao modelo:", mensagens)
+            st.write("🔍 Debug: Mensagens enviadas ao modelo:", mensagens)
             respostas = retorna_resposta_modelo(mensagens,
                                                 modelo='gpt-3.5-turbo',
                                                 temperatura=0,
