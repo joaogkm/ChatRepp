@@ -1,4 +1,4 @@
-openai==1.48.0
+openai==1.55.3
 langchain == 0.3.20
 dotenv == 0.9.9
 fake-useragent == 2.0.3
