@@ -4,7 +4,7 @@ import openai
 import requests
 import re
 import pickle
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from fake_useragent import UserAgent
 from langchain_community.document_loaders import (
     YoutubeLoader, CSVLoader, PyPDFLoader, TextLoader)
@@ -16,9 +16,11 @@ from pathlib import Path
 from unidecode import unidecode
 
 # Carrega arquivo .env
-load_dotenv('.env')
+# load_dotenv('.env')
+_ = load_dotenv(find_dotenv())
 client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 # print('hello', os.getenv('OPENAI_API_KEY'))
+
 
 # Obtém o diretório onde os arquivos estão salvos
 DIRETORIO_ARQUIVOS = os.path.join(
