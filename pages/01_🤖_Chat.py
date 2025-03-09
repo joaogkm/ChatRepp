@@ -17,7 +17,7 @@ from unidecode import unidecode
 
 # Carrega arquivo .env
 load_dotenv()
-client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = openai.OpenAI(api_key='OPENAI_API_KEY')
 # client = openai.OpenAI(api_key=api_key)
 
 # print('hello', os.getenv('OPENAI_API_KEY'))
