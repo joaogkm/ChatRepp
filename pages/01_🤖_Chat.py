@@ -151,6 +151,7 @@ def pagina_principal():
         resposta_completa = ''
         try:
             # Verifica exatamente o que está sendo enviado ao modelo
+
             st.write("🔍 Debug: Mensagens enviadas ao modelo:", mensagens)
             respostas = retorna_resposta_modelo(mensagens,
                                                 modelo='gpt-3.5-turbo',
