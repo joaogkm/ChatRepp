@@ -16,9 +16,10 @@ from pathlib import Path
 from unidecode import unidecode
 
 # Carrega arquivo .env
-# load_dotenv('.env')
-_ = load_dotenv(find_dotenv())
+load_dotenv()
 client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+# client = openai.OpenAI(api_key=api_key)
+
 # print('hello', os.getenv('OPENAI_API_KEY'))
 
 
@@ -32,6 +33,7 @@ ARQUIVO_URLS = os.path.join(DIRETORIO_ARQUIVOS, "urls.txt")
 # Define o tamanho dos chunks de texto
 CHUNK_SIZE = 2000  # Aproximadamente 2000 caracteres por trecho
 CHUNK_OVERLAP = 200  # Sobreposição para manter contexto entre partes
+
 
 # =================================================================
 # INICIALIZAÇÃO
@@ -178,7 +180,6 @@ def pagina_principal():
 
 def retorna_resposta_modelo(mensagens, modelo='gpt-3.5-turbo', temperatura=0, stream=False):
     client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
     response = client.chat.completions.create(
         model=modelo,
         messages=mensagens,
