@@ -4,13 +4,10 @@ import openai
 import requests
 import re
 import pickle
-# from utils_openai import retorna_resposta_modelo
-# from utils_files import *
 from dotenv import load_dotenv
 from fake_useragent import UserAgent
 from langchain_community.document_loaders import (
     YoutubeLoader, CSVLoader, PyPDFLoader, TextLoader)
-from fake_useragent import UserAgent
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from time import sleep
 from bs4 import BeautifulSoup
